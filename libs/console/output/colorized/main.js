@@ -1,8 +1,9 @@
 'use strict'
 
+// libs
 const chalk = require('chalk')
 
-
+// messaga colors
 const msgColors = {
     type: {
         'regular': {fg: chalk.white, bg: chalk.bgBlack },
