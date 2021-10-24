@@ -1,16 +1,18 @@
 'use strict'
 
-const chakl = require('chakl')
+const chalk = require('chalk')
 
 
-const msgColors = [
-    { type: 'regular', fg: 'white', bg: 'black'},
-    { type: 'err', fg: 'white', bg: 'red'},
-    { type: 'info', fg: 'yellow', bg: 'blue' },
-    { type: 'warn', fg: 'red', bg: 'black' },
-    { type: 'green', fg : 'green', bg: 'black' },
-    { type: 'red', fg: 'red', bg: 'black' }
-]
+const msgColors = {
+    type: {
+        'regular': {fg: chalk.white, bg: chalk.bgBlack },
+        'err': { fg: chalk.white, bg: chalk.bgRed },
+        'info': { fg: chalk.yellow, bg: chalk.bgBlue },
+        'warn': { fg: chalk.red, bg: chalk.bgBlack },
+        'green': { fg : chalk.green, bg: chalk.bgBlack },
+        'red': { fg: chalk.red, bg: chalk.bgBlack }
+    }
+}
 
 /**
  * 
@@ -18,5 +20,5 @@ const msgColors = [
 module.exports.pP =(msg, type='none') => {
    const color = msgColors.type[type]
    
-   console.log(chakl.color.bg(chakl.color.fg(msg)))
+   console.log( color.fg(color.bg((msg))) )
 }

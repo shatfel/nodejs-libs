@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "chakl": "0.0.1-security"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
   }
 }

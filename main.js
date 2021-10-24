@@ -1,6 +1,6 @@
 'use strict'
 
-const chakl = require('chakl')
+const chalk = require('chalk')
 const colorized = require('./libs/console/output/colorized/test/main')
 
 /**
@@ -9,3 +9,10 @@ const colorized = require('./libs/console/output/colorized/test/main')
 function doTests() {
   colorized.doTests()
 }
+
+
+
+/**
+ * MAIN
+ */
+doTests()
